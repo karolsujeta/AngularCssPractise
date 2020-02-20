@@ -23,14 +23,14 @@
     position: relative;
 }
 
-.btn__animated{
+.btn-animated{
     animation-name: moveInBottom;
     animation-duration: 2s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
 }
 
-.btn__white{
+.btn-white{
     background-color: #ffffff;
     color: #777;
 }
@@ -58,7 +58,7 @@
     transition: all .6s;
 }
 
-.btn__white::after{
+.btn-white::after{
     background-color: #ffffff;
 }
 
