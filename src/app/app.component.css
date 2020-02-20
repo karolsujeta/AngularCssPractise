@@ -1,0 +1,158 @@
+.header{
+    height: 80vh;
+    background-image: linear-gradient(
+        to right,
+        #134653c2,
+        #1c4266d2),
+        url(https://wallpaperaccess.com/full/143729.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    clip-path: polygon(0px 0px, 100% 0px, 100% 62.19vh, 0px 100%);
+}
+
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 200px;
+    transition: all .25s;
+    position: relative;
+}
+
+.btn__animated{
+    animation-name: moveInBottom;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.btn__white{
+    background-color: #ffffff;
+    color: #777;
+}
+
+.btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .35);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .35);
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .6s;
+}
+
+.btn__white::after{
+    background-color: #ffffff;
+}
+
+.btn:hover::after{
+    transform: scale(1.4);
+    opacity: 0;
+}
+
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo-box__logo{
+    height: 100px;
+}
+
+.heading-primary{
+    color:#ffffff;
+    text-transform: uppercase;
+    text-align: center;
+
+    backface-visibility: hidden;
+    margin-bottom: 40px;
+}
+
+.heading-primary__main{
+    display: block;
+    font-size: 50px;
+    letter-spacing: 30px;
+
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+}
+
+.heading-primary__sub{
+    display: block;
+    font-size: 30px;
+    letter-spacing: 25px;
+
+    animation: moveInRight 2s;
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform:translateX(-100px);
+    }
+
+    80%{
+        opacity:1;
+        transform: translate(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform:translateX(100px);
+    }
+
+    80%{
+        opacity:1;
+        transform: translate(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform:translateY(30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
